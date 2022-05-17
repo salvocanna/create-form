@@ -34,7 +34,7 @@ export interface Field {
 export const typesValidation: Partial<Record<FieldType, Partial<Pick<RegisterOptions, 'validate' | 'setValueAs'>>>> = {
 	number: {
 		validate: (v: string) => !Number.isNaN(Number(v)),
-		setValueAs: Number,
+		setValueAs: (v: string) => v.length > 0 ? Number(v) : '',
 	},
 };
 
