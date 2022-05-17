@@ -1,0 +1,65 @@
+{
+  "name": "employees-app",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "typecheck": "tsc",
+    "lint": "eslint -c .eslintrc.js --ext .tsx --ext .ts './src'",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "babel-jest": "^28.1.0",
+    "react": "^17",
+    "react-dom": "^17",
+    "react-hook-form": "^7.31.1",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.17.12",
+    "@testing-library/react": "^13.2.0",
+    "@types/history": "^4",
+    "@types/jest": "^27.5.1",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "@types/styled-components": "^5.1.25",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "@vitejs/plugin-react": "^1.0.7",
+    "eslint": "^7",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "history": "^4",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "nanoid": "^3.3.4",
+    "prettier": "^2.6.2",
+    "react-test-renderer": "^18.1.0",
+    "ts-jest": "^28.0.2",
+    "typescript": "^4.6.4",
+    "vite": "^2.7.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "jsdom",
+    "testRegex": ".*(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  },
+  "resolutions": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17"
+  }
+}
