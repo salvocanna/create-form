@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 import styled from 'styled-components';
 
@@ -15,10 +15,18 @@ const Form: React.FunctionComponent = () => {
 		register,
 		handleSubmit,
 		watch,
+		clearErrors,
 		formState: { errors },
 	} = useFormContext();
 
 	const countryCode = watch('countryCode') as string;
+
+	useEffect(() => {
+		if (!countryCode)
+			return;
+
+		clearErrors();
+	}, [countryCode, clearErrors]);
 
 	const formFields = getFormFields(config, countryCode);
 
